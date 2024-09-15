@@ -1,0 +1,16 @@
+median.java
+int n = nums1.length;
+        int m = nums2.length;
+        int[] merged = new int[n + m];
+        System.arraycopy(nums1, 0, merged, 0, n);
+        System.arraycopy(nums2, 0, merged, n, m);
+        
+        Arrays.sort(merged);
+        
+        if (merged.length % 2 == 0) {
+            int x = merged.length / 2;
+            return (merged[x] + merged[x - 1]) / 2.0;
+        } else {
+            int y = merged.length / 2;
+            return merged[y];
+       
